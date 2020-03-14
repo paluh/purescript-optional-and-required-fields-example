@@ -1,0 +1,10 @@
+{
+  "name": "emtpy",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "pulp": "^13.0.0"
+  }
+}
