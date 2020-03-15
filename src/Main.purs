@@ -57,12 +57,15 @@ logOptionalAndRequired = do
   log $ stringify' { opt2: 2, req1: 8.0, req2: "test" }
   log $ stringify' { opt1: true, opt2: 2, req1: 8.0, req2: "test" }
 
-  -- | This won't compile because
+  -- | This won't compile because required field req1 is miessing
   -- log $ stringify' { opt1: true, opt2: 2, req2: "test" }
 
   log $ stringify'' { req1: 8.0, req2: "test" }
   log $ stringify'' { opt2: 2, req1: 8.0, req2: "test" }
   log $ stringify'' { opt1: true, opt2: 2, req1: 8.0, req2: "test" }
+
+  -- | This also won't compile because required field req1 is miessing
+  -- log $ stringify'' { opt1: true, opt2: 2, req2: "test" }
 
 
 main ∷ Effect Unit
