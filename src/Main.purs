@@ -33,6 +33,12 @@ stringify'
   ⇒ Union given optionalMissing (RequiredFields + OptionalFields)
   ⇒ { | given }
   → String
+-- | I'm not able to use the fact from the constraint that
+-- | `r` contains `req2` field.
+-- | This function body won't compile:
+-- | stringify' r = r.req2
+-- |
+-- | Of course I can provide my dummy body or pass this record to the FFI
 stringify' r = unsafeStringify r
 
 logOptionalAndRequired ∷ Effect Unit
